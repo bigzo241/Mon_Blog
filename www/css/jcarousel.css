@@ -1,0 +1,28 @@
+.jcarousel
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.jcarousel ul
+{
+    position: relative;
+    width: 1000rem;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.jcarousel li
+{
+    float: left;
+    width: 300px;
+}
+
+/* Design et compotement des boutons de control */
+.jcarousel-control-prev, .jcarousel-control-next
+{
+    position: absolute;
+    font-size: 12rem;
+}

@@ -1,0 +1,356 @@
+/* Style de mes boutons personnels */
+.myButton
+{
+    text-decoration: none !important;
+    padding: 0.3% 1% 0.3% 1%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.outlineBlue
+{
+    color: rgb(41, 182, 247);
+    border-color: rgb(41, 182, 247);
+}
+
+.outlineGreen
+{
+    color: rgb(7, 228, 7);
+    border-color: rgb(7, 228, 7);
+}
+
+.outlineBlue:hover
+{
+    color: white;
+    background-color: rgb(41, 182, 247);
+}
+
+.outlineGreen:hover
+{
+    color: white;
+    background-color: rgb(6, 173, 6);
+}
+
+.outlineDegrade
+{
+    /* color: linear-gradient(90deg, rgb(7, 228, 7),rgb(21, 116, 224)); */
+    /* background-color: linear-gradient(90deg, rgb(7, 228, 7),rgb(21, 116, 224)); */
+    /* color: linear-gradient(tomato, deepskyblue); */
+    border-color: linear-gradient(tomato, deepskyblue);
+    
+}
+
+/* le code css de mon composant card */
+.myCard
+{
+    border: 1px solid rgb(201, 199, 199);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.myCardImg + div
+{
+    position: absolute;
+    z-index: 50;
+    height: 0;
+    opacity: 0.8;
+    background: chartreuse;
+    transition: height 1s ease, opacity 0.5s ease;
+}
+
+.myCardImg:hover + div
+{
+    height: 100px;
+    opacity: 0.4;
+    /* animation: slideUp 1s ease; */
+}
+
+.child
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.7em;
+    text-align: justify;
+    /* background: #ccc; */
+    padding: 20px;
+}
+
+/* loader */
+
+.loader 
+{
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+}
+
+.loaderColor1
+{
+    border-top: 16px solid #95f204; /* green */
+}
+.loaderColor2
+{
+    border-top: 16px solid #f204d2; /* green */
+}
+.loaderColor3
+{
+    border-top: 16px solid #04d6f2; /* green */
+}
+.loaderColor4
+{
+    border-top: 16px solid #0804f2; /* green */
+}
+
+.imgBox1
+{
+    position: relative;
+    z-index: 500;
+    box-shadow: 0px -50px 12px red inset;
+}
+
+.imgBox1 img
+{
+    position: relative;
+    z-index: 5;
+}
+
+.imgBox2
+{
+    width: 250px;
+    height: 200px;
+    background-image: url("../img/img2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0px -60px 105px rgb(95, 94, 94) inset;
+    border-radius: 7px;
+}
+
+/* Couleurs */
+
+.progressBar
+{
+    height: 2rem;
+    /* animation: progress 1s linear infinite; */
+}
+
+    /* couleurs degradées */
+.degrade .card:nth-of-type(2)
+{
+    background: linear-gradient(90deg, rgb(7, 228, 7),rgb(21, 116, 224));
+}
+.degrade .card:nth-of-type(3)
+{
+    background: linear-gradient(#95f204, #e3d520);
+}
+
+    /* simple */
+.simple .card:nth-of-type(2)
+{
+    background-color: rgb(205, 50, 166);
+}
+
+.simple .card:nth-of-type(3)
+{
+    background-color: rgb(255, 72, 0);
+}
+
+    /* rgba */
+.rgba .card:nth-of-type(2)
+{
+    /* background-color: rgba(100, 90, 220, 0.1); */
+    animation: opacity1 4000ms linear infinite;
+}
+.rgba .card:nth-of-type(3)
+{
+    /* background-color: rgba(100, 90, 220, 0.1); */
+    animation: opacity2 4000ms linear infinite;
+}
+
+    /* Hsl */
+.hsl .card:nth-of-type(2)
+{
+    background-color: hsla(250, 95%, 49%, 0.746);
+}
+
+.hsl .card:nth-of-type(3)
+{
+    background-color: hsl(50, 97%, 55%);
+}
+
+
+/* css de la page navbar */
+
+.menu
+{
+    display: flex;
+    flex-direction: row;
+    background-color: beige;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+    /* suppression des puces des elements de la liste */
+.menu, .menu ul
+{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+    /* cacher les sous liens */
+.menu > li ul
+{
+    display: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+    /* liens principaux */
+.menu >li >a
+{
+    text-decoration: none;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+    /* Sous liens */
+.menu >li >ul li a
+{
+    text-decoration: none;
+    color: black !important;
+    padding: 1%;
+    width: 100%;
+}
+
+    /* au survol des sous liens */
+.menu >li >ul li a:hover
+{
+    background: rgb(233, 231, 231);
+}
+
+    /* changement d'apparence des liens principaux au click */
+.menu >li a:focus
+{
+    color: white;
+    background: #04d6f2;
+}
+
+    /* apparition des sous-lien au survol */
+.menu li:hover >ul
+{
+    display: block;
+    position: absolute;
+    background-color: white;
+    opacity: 1;
+    margin-top: 0.4rem;
+    box-shadow: black 0px 0px 1.5px;
+    z-index: 1000;
+    width: max-content;
+}
+
+.menu ul
+{
+    border-radius: 5px;
+}
+
+
+/* .menu >li li
+{
+    width: max-content; 
+    padding: 0 1% 1% 1%;
+    padding-bottom: 0.5rem;
+    padding: 5%;
+} */
+
+.pclip
+{
+    /* clip: rect(2rem 0 1rem 0); */
+    /* clip-path: ellipse(50%); */
+    height: 200px !important;
+    overflow: hidden;
+    text-overflow: clip;
+    text-overflow: ellipsis;
+}
+
+.menu1 li
+{
+    width: max-content;
+    padding: 1%;
+}
+
+
+
+
+/* Definition des animations */
+@keyframes opacity1
+{
+    from{
+        background-color: rgba(10, 15, 220, 1);
+    }
+
+    50%{
+        background-color: rgba(100, 90, 220, 0.1);
+    }
+
+    100%{
+        background-color: rgba(100, 90, 220, 1);
+    }
+}
+
+@keyframes opacity2
+{
+    from{
+        background-color: rgba(50, 250, 255, 1);
+    }
+
+    50%{
+        background-color: rgba(50, 250, 255, 0.1);
+    }
+
+    100%{
+        background-color: rgba(50, 250, 255, 1);
+    }
+}
+
+/* animation pour le loader */
+@keyframes spin 
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* animation pour la barrede progression */
+@keyframes progress
+{
+    0%
+    {
+        background: linear-gradient(90deg, rgb(7, 228, 7) 0%,rgb(255, 255, 255) 1%, rgb(7, 228, 7) 99%);
+    }
+
+    25%
+    {
+        background: linear-gradient(90deg, rgb(7, 228, 7) 25%,rgb(255, 255, 255) 1%, rgb(7, 228, 7) 74%);
+    }
+
+    50%
+    {
+        background: linear-gradient(90deg, rgb(7, 228, 7) 50%,rgb(255, 255, 255) 1%, rgb(7, 228, 7) 49%);
+    }
+
+    75%
+    {
+        background: linear-gradient(90deg, rgb(7, 228, 7) 75%,rgb(255, 255, 255) 1%, rgb(7, 228, 7) 24%);
+    }
+
+    100%
+    {
+        background: linear-gradient(90deg, rgb(7, 228, 7) 99%,rgb(255, 255, 255) 1%, rgb(7, 228, 7) 0%);
+    }
+}
+
+/* @keyframes slideUp
+{
+    to{
+        height: 100px;
+    }
+} */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+	<head>
+		<!-- Required meta tags always come first -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		<!-- Titre des pages -->
+		<title> <%- siteTitle %> </title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootnavbar.css">
+		<link rel="stylesheet" href="css/theme.css">
+		<link rel="stylesheet" href="css/couleur.css">
+		<link rel="stylesheet" href="css/jcarousel.css">
+		<link rel="stylesheet" href="css/mycard.css">
+	</head>
+
+	<body>
+
+		<%- partial("partiel/_header") %>
+		<%- yield %>
+		
+
+		<!-- jQuery first, then Bootstrap JS. -->
+		<script src="js/jquery-3.4.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootnavbar.js"></script>
+		<script src="js/jcarousel/jquery.jcarousel.min.js"></script>
+		<script src="js/jcarousel.js"></script>
+		<script src="js/couleur.js"></script>
+
+	</body>
+
+</html>
